@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 在文件末尾添加以下样式 */
+.markdown-body {
+  @apply text-sm leading-normal;
+}
+
+.markdown-body h1 {
+  @apply text-2xl font-bold mt-6 mb-4;
+}
+
+.markdown-body h2 {
+  @apply text-xl font-bold mt-5 mb-3;
+}
+
+.markdown-body h3 {
+  @apply text-lg font-bold mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply my-2;
+}
+
+.markdown-body ul {
+  @apply list-disc pl-5 my-2;
+}
+
+.markdown-body ol {
+  @apply list-decimal pl-5 my-2;
+}
+
+.markdown-body li {
+  @apply my-1;
+}
+
+.markdown-body pre {
+  @apply my-3 p-3 bg-gray-800 rounded-lg overflow-x-auto;
+}
+
+.markdown-body pre code {
+  @apply text-white text-sm;
+}
+
+.markdown-body table {
+  @apply w-full border-collapse my-3;
+}
+
+.markdown-body th,
+.markdown-body td {
+  @apply border border-gray-300 px-3 py-2;
+}
+
+.markdown-body blockquote {
+  @apply pl-4 border-l-4 border-gray-300 text-gray-600 my-2;
+}
